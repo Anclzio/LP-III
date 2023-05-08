@@ -1,6 +1,6 @@
 public class Circulo {
     double x, y, raio;
-    final double PI = 3.14159265;
+    final static double PI = 3.14159265;
 
     public Circulo(double x, double y, double raio) {
         this.x = x;
@@ -21,9 +21,7 @@ public class Circulo {
     }
 
     private boolean validaCirculo() {
-        if(this.getRaio() > 0)
-            return true;
-        return false;    
+        return this.getRaio() > 0;  
     }
 
     public boolean isInnerPoint(Ponto2D ponto) {
